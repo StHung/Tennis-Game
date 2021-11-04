@@ -33,6 +33,8 @@ public class GameUI : MonoBehaviour, IOnScoreChange, IOnGameOver
 
     public void OnGameOVer()
     {
+        AudioManager.Instance.PlayGameEndSound();
+
         var scores = EventManager.GetSender(EventName.ON_GAME_OVER) as Tuple<int, int>;
 
         int playerScore = scores.Item1;

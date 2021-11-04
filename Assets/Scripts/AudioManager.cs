@@ -24,7 +24,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayTennisSound()
     {
-        AudioClip tennisSFX = Resources.Load<AudioClip>("SF-tennis1");
+        AudioClip tennisSFX = Resources.Load<AudioClip>("SoundFX/SF-tennis1");
         soundAus.PlayOneShot(tennisSFX);
+    }
+    
+    public void PlayGameEndSound()
+    {
+        AudioClip gameEndSFX = Resources.Load<AudioClip>("SoundFX/endgameSound");
+        soundAus.PlayOneShot(gameEndSFX);
     }
 }

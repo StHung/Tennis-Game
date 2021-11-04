@@ -62,7 +62,7 @@ public class Ball : MonoBehaviour, IOnScoreChange, IOnGameOver
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Out"))
+        if (other.CompareTag("Out") && !isGameOver)
         {
             if (Hitter == "Player")
             {
